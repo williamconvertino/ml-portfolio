@@ -16,24 +16,27 @@ const navItems: NavItem[] = [
 
 export default function Navigator() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-4">
-      <div className="text-xl font-bold">
-        Will Smith
-      </div>
-      <div className="flex gap-6">
-        {navItems.map((item) => (
-          <Link
-            key={item.to}
-            to={item.to}
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-            className="cursor-pointer hover:text-gray-600"
-          >
-            {item.label}
-          </Link>
-        ))}
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm border-b border-gray-100">
+      <div className="section-container h-[72px] flex items-center justify-between">
+        <div className="text-2xl font-bold font-['Poppins'] text-primary">
+          Will Smith
+        </div>
+        <div className="flex gap-8">
+          {navItems.map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              spy={true}
+              smooth={true}
+              offset={-72}
+              duration={500}
+              className="hover-effect text-text-secondary hover:text-primary cursor-pointer font-medium"
+              activeClass="text-primary"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
       </div>
     </nav>
   );

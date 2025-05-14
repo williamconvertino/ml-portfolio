@@ -16,25 +16,44 @@ interface ContentSectionProps {
 export default function ContentSection({ id, title, items }: ContentSectionProps) {
   return (
     <Section id={id} title={title}>
-      <div className="grid gap-6">
+      <div className="grid gap-8">
         {items.map((item, index) => (
-          <div key={index} className="flex gap-4 p-4">
-            <div className="w-24 h-24">
+          <div key={index} className="card p-6 flex flex-col md:flex-row gap-6">
+            <div className="w-full md:w-48 h-48 flex-shrink-0">
               {/* Image placeholder */}
-              <div className="w-full h-full bg-gray-200" />
+              <div className="w-full h-full rounded-lg bg-background-alt" />
             </div>
-            <div>
-              <h3 className="text-xl font-semibold">{item.title}</h3>
-              <p>{item.description}</p>
+            <div className="flex-1">
+              <h3 className="text-2xl font-semibold text-text-primary mb-3 font-['Poppins']">
+                {item.title}
+              </h3>
+              <p className="text-text-secondary mb-4 leading-relaxed">
+                {item.description}
+              </p>
               {item.links && (
-                <div className="flex gap-4 mt-2">
+                <div className="flex flex-wrap gap-4">
                   {item.links.map((link, linkIndex) => (
                     <a
                       key={linkIndex}
                       href={link.url}
-                      className="text-blue-600 hover:underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-primary hover:text-primary-dark hover-effect"
                     >
                       {link.label}
+                      <svg
+                        className="w-4 h-4 ml-1"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
+                      </svg>
                     </a>
                   ))}
                 </div>

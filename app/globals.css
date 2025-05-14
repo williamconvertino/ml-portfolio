@@ -1,22 +1,59 @@
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */
+
 @import 'tailwindcss';
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
+
 :root {
-  --foreground-rgb: 51, 51, 51;
-  --background-rgb: 250, 250, 250;
+  /* Modern, professional color palette */
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --secondary: #64748b;
+  --accent: #3b82f6;
+  --background: #ffffff;
+  --background-alt: #f8fafc;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-light: #94a3b8;
+  --border: #e2e8f0;
+}
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
+  color: var(--text-primary);
+  background: var(--background);
   min-height: 100vh;
-  padding-top: 64px; /* Height of the navigation bar */
+  padding-top: 72px; /* Increased nav height */
+  line-height: 1.6;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Custom utility classes */
+.section-container {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.hover-effect {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200;
 }
