@@ -19,7 +19,7 @@ interface ContentSectionProps {
 export default function ContentSection({ id, title, items }: ContentSectionProps) {
   return (
     <Section id={id} title={title}>
-      <div className="grid gap-6">
+      <div className="grid">
         {items.map((item, index) => (
           <div key={index} className="card p-8 flex flex-col md:flex-row gap-2">
             <div className="w-full md:w-40 h-40 flex-shrink-0">

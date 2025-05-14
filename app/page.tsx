@@ -32,17 +32,20 @@ export default function Home() {
     <main>
       <Navigator />
       <AboutMe />
-      <ContentSection
-        id="publications"
-        title="Publications"
-        items={publications}
-      />
-      <ContentSection
-        id="projects"
-        title="Projects"
-        items={dummyProjects}
-      />
-      <Contact />
+        
+      <div className="content-wrapper">
+        <ContentSection
+          id="publications"
+          title="Publications"
+          items={publications}
+        />
+        <ContentSection
+          id="projects"
+          title="Projects"
+          items={dummyProjects}
+        />
+        <Contact />
+      </div>
       <Footer />
     </main>
   );
