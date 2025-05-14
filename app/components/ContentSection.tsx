@@ -17,10 +17,10 @@ interface ContentSectionProps {
 export default function ContentSection({ id, title, items }: ContentSectionProps) {
   return (
     <Section id={id} title={title}>
-      <div className="grid gap-8">
+      <div className="grid gap-6">
         {items.map((item, index) => (
-          <div key={index} className="card p-8 flex flex-col md:flex-row gap-8">
-            <div className="w-full md:w-48 h-48 flex-shrink-0 relative rounded-lg overflow-hidden">
+          <div key={index} className="card overflow-hidden flex flex-col md:flex-row">
+            <div className="w-full md:w-40 h-40 flex-shrink-0 relative">
               <Image
                 src={item.image}
                 alt={item.title}
@@ -29,26 +29,26 @@ export default function ContentSection({ id, title, items }: ContentSectionProps
                 className="hover-effect"
               />
             </div>
-            <div className="flex-1">
-              <h3 className="text-2xl font-semibold text-text-primary mb-4 font-['Poppins']">
+            <div className="flex-1 py-5 px-6">
+              <h3 className="text-xl font-semibold text-text-primary mb-2 font-['Poppins']">
                 {item.title}
               </h3>
-              <p className="text-text-secondary mb-6 leading-relaxed">
+              <p className="text-text-secondary mb-3 leading-relaxed text-sm">
                 {item.description}
               </p>
               {item.links && (
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-3">
                   {item.links.map((link, linkIndex) => (
                     <a
                       key={linkIndex}
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-primary hover:text-primary-dark hover-effect"
+                      className="inline-flex items-center text-primary hover:text-primary-dark hover-effect text-sm"
                     >
                       {link.label}
                       <svg
-                        className="w-4 h-4 ml-1"
+                        className="w-3 h-3 ml-1"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
