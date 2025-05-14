@@ -30,10 +30,12 @@ export default function Navigator() {
 
   return (
     <nav className={`nav-fixed transition-all duration-300 ${
-      isScrolled ? 'bg-white border-b border-gray-100' : 'bg-white'
+      isScrolled ? 'bg-white border-b border-gray-100' : 'bg-transparent'
     }`}>
       <div className="section-container h-[4rem] flex items-center justify-between">
-        <div className="text-2xl font-bold font-['Poppins'] text-primary">
+        <div className={`text-2xl font-bold font-['Poppins'] transition-colors duration-300 ${
+          isScrolled ? 'text-primary' : 'text-white'
+        }`}>
           William Convertino
         </div>
         <div className="flex gap-6">
@@ -41,12 +43,18 @@ export default function Navigator() {
             <Link
               key={item.to}
               to={item.to}
-              spy={true}
+              spy={false}
               smooth={true}
               offset={-64}
               duration={500}
-              className="hover-effect text-text-secondary hover:text-primary cursor-pointer font-medium"
-              activeClass="text-primary"
+              className={`
+                hover-effect cursor-pointer font-medium px-4 py-2 rounded-md
+                transition-all duration-200 active:scale-95
+                ${isScrolled 
+                  ? 'text-text-secondary hover:text-primary hover:bg-black/5 active:bg-black/10' 
+                  : 'text-white/90 hover:text-white hover:bg-white/10 active:bg-white/20'
+                }
+              `}
             >
               {item.label}
             </Link>
