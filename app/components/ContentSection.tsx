@@ -3,6 +3,7 @@ import Image from 'next/image';
 
 interface ContentItem {
   title: string;
+  subtitle?: string;
   description: string;
   image: string;
   links?: { url: string; label: string }[];
@@ -11,6 +12,7 @@ interface ContentItem {
 interface ContentSectionProps {
   id: string;
   title: string;
+  subtitle?: string;
   items: ContentItem[];
 }
 
@@ -19,20 +21,25 @@ export default function ContentSection({ id, title, items }: ContentSectionProps
     <Section id={id} title={title}>
       <div className="grid gap-6">
         {items.map((item, index) => (
-          <div key={index} className="card overflow-hidden flex flex-col md:flex-row">
-            <div className="w-full md:w-40 h-40 flex-shrink-0 relative">
+          <div key={index} className="card p-8 flex flex-col md:flex-row gap-2">
+            <div className="w-full md:w-40 h-40 flex-shrink-0">
               <Image
                 src={item.image}
                 alt={item.title}
-                fill
-                style={{ objectFit: 'cover' }}
-                className="hover-effect"
+                width={160}
+                height={160}
+                className="w-full h-full object-cover hover-effect"
               />
             </div>
-            <div className="flex-1 py-5 px-6">
-              <h3 className="text-xl font-semibold text-text-primary mb-2 font-['Poppins']">
+            <div className="flex-1 ml-10">
+              <h3 className="text-xl font-semibold text-text-primary font-['Poppins']">
                 {item.title}
               </h3>
+              {item.subtitle && (
+                <p className="text-text-secondary italic text-sm mb-2">
+                  {item.subtitle}
+                </p>
+              )}
               <p className="text-text-secondary mb-3 leading-relaxed text-sm">
                 {item.description}
               </p>

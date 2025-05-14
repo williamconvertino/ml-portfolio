@@ -7,21 +7,23 @@ import Footer from './components/Footer';
 const publications = [
   {
     title: 'Understanding Attention-Based In-Context Learning for Categorical Data',
-    description: 'Led development of computer vision models for autonomous systems.',
+    subtitle: 'ICML 2025',
+    description: 'As second author on this paper, I led the development of the language modeling component, extending the theoretical foundations of in-context learning (ICL) from continuous to categorical domains. Our work introduces a novel framework that enables attention-based models to perform gradient descent-style learning over categorical data, laying the groundwork for more interpretable and adaptable ICL behavior in language models. This contribution bridges theoretical insights with practical advances in transformer-based NLP systems.',
     image: '/icml.png',
-    links: [{ url: '#', label: 'Link' }],
+    // links: [{ url: '#', label: 'Link' }],
   }
 ];
 
 const dummyProjects = [
   {
-    title: 'AI Image Recognition',
-    description: 'Developed a state-of-the-art image recognition system.',
-    image: '/placeholder.jpg',
-    links: [
-      { url: '#', label: 'GitHub' },
-      { url: '#', label: 'Demo' },
-    ],
+    title: 'Deepfake Detection',
+    subtitle: 'Pytorch',
+    description: 'This project focused on detecting deepfake manipulations using deep learning models. We benchmarked the performance and generalizability of several classifiers, including Vision Transformers (ViT), EfficientNet, and XceptionNet, across varied datasets and frame sampling strategies. I was responsible for designing and building the core training and evaluation pipelines, and for modifying and fine-tuning the Vision Transformer model.',
+    image: '/faceforensics.png',
+    // links: [
+    //   { url: '#', label: 'GitHub' },
+    //   { url: '#', label: 'Demo' },
+    // ],
   },
 ];
 
