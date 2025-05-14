@@ -4,19 +4,13 @@ import ContentSection from './components/ContentSection';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
-const dummyExperience = [
+const publications = [
   {
-    title: 'Machine Learning Engineer',
+    title: 'Understanding Attention-Based In-Context Learning for Categorical Data',
     description: 'Led development of computer vision models for autonomous systems.',
-    image: '/placeholder.jpg',
-    links: [{ url: '#', label: 'Company Website' }],
-  },
-  {
-    title: 'Research Scientist',
-    description: 'Published papers on deep learning applications in healthcare.',
-    image: '/placeholder.jpg',
-    links: [{ url: '#', label: 'Research Paper' }],
-  },
+    image: '/icml.png',
+    links: [{ url: '#', label: 'Link' }],
+  }
 ];
 
 const dummyProjects = [
@@ -37,9 +31,9 @@ export default function Home() {
       <Navigator />
       <AboutMe />
       <ContentSection
-        id="experience"
-        title="Work Experience"
-        items={dummyExperience}
+        id="publications"
+        title="Publications"
+        items={publications}
       />
       <ContentSection
         id="projects"

@@ -1,4 +1,5 @@
 import Section from './Section';
+import Image from 'next/image';
 
 interface ContentItem {
   title: string;
@@ -19,9 +20,14 @@ export default function ContentSection({ id, title, items }: ContentSectionProps
       <div className="grid gap-8">
         {items.map((item, index) => (
           <div key={index} className="card p-8 flex flex-col md:flex-row gap-8">
-            <div className="w-full md:w-48 h-48 flex-shrink-0">
-              {/* Image placeholder */}
-              <div className="w-full h-full rounded-lg bg-background-alt" />
+            <div className="w-full md:w-48 h-48 flex-shrink-0 relative rounded-lg overflow-hidden">
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                style={{ objectFit: 'cover' }}
+                className="hover-effect"
+              />
             </div>
             <div className="flex-1">
               <h3 className="text-2xl font-semibold text-text-primary mb-4 font-['Poppins']">

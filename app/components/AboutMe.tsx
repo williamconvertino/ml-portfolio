@@ -4,8 +4,8 @@ import Image from 'next/image';
 export default function AboutMe() {
   return (
     <Section id="about">
-      <div className="flex flex-col mt-20 mb-10 md:flex-row gap-20 items-center md:items-start">
-        <div className="w-64 h-64 rounded-full overflow-hidden shadow-lg flex-shrink-0 relative">
+      <div className="flex flex-col mt-20 mb-10 md:flex-row gap-20 items-center justify-center">
+        <div className="w-52 h-52 rounded-full overflow-hidden shadow-lg flex-shrink-0 relative">
           <div className="absolute inset-0">
             <Image
               src="/headshot2.JPEG"
@@ -23,9 +23,7 @@ export default function AboutMe() {
         </div>
         <div className="flex-1 max-w-2xl">
           <p className="text-lg text-text-secondary leading-relaxed">
-            I am a machine learning engineer with a passion for developing innovative solutions.
-            My expertise includes deep learning, computer vision, and natural language processing.
-            I am currently seeking new opportunities where I can apply my skills to solve challenging problems.
+            My name is William Convertino and I'm a PhD student at Duke University. My focus is on improving the interpretability of the transformer for language and vision. I've had a paper accepted at ICML and look forward to furthering my research in the field.
           </p>
         </div>
       </div>
