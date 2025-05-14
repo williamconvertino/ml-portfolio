@@ -18,16 +18,16 @@ export default function ContentSection({ id, title, items }: ContentSectionProps
     <Section id={id} title={title}>
       <div className="grid gap-8">
         {items.map((item, index) => (
-          <div key={index} className="card p-6 flex flex-col md:flex-row gap-6">
+          <div key={index} className="card p-8 flex flex-col md:flex-row gap-8">
             <div className="w-full md:w-48 h-48 flex-shrink-0">
               {/* Image placeholder */}
               <div className="w-full h-full rounded-lg bg-background-alt" />
             </div>
             <div className="flex-1">
-              <h3 className="text-2xl font-semibold text-text-primary mb-3 font-['Poppins']">
+              <h3 className="text-2xl font-semibold text-text-primary mb-4 font-['Poppins']">
                 {item.title}
               </h3>
-              <p className="text-text-secondary mb-4 leading-relaxed">
+              <p className="text-text-secondary mb-6 leading-relaxed">
                 {item.description}
               </p>
               {item.links && (

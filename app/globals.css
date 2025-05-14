@@ -35,13 +35,11 @@ body {
   color: var(--text-primary);
   background: var(--background);
   min-height: 100vh;
-  padding-top: 72px; /* Increased nav height */
+  /* padding-top: 100px; */
   line-height: 1.6;
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 

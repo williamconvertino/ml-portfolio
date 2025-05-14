@@ -12,7 +12,7 @@ const contactInfo = {
 export default function Contact() {
   return (
     <Section id="contact" title="Contact">
-      <div className="max-w-2xl mx-auto">
+      <div>
         <div className="card p-8 text-center">
           <div className="space-y-4 mb-8">
             <div className="flex items-center justify-center gap-2 text-text-secondary hover:text-primary hover-effect">

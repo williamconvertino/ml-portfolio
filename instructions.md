@@ -16,7 +16,7 @@ My name should be left justified in the nav bar. It should stand out, whether th
 
 Right justified on the nav bar should be the buttons for navigating to each section.
 
-The nav bar should be the same color as the background, but highlighting the buttons should make them turn slightly darker for increased visibility.
+The nav bar should be the same color as the background, but highlighting the buttons should make them turn slightly darker for increased visibility. It should stay at the top of the page as you scroll, to make sure that the user always has access to it.
 
 # About Me Blurb
 
@@ -29,6 +29,10 @@ Each content section should have a centered title followed by a list of cards. E
 # Contact Section
 
 This section should contain any social media links, my phone number, and my email.
+
+# Footer
+
+Finally, there should be a simple footer that just includes a copywrite for 2025 and an email. This should be small and relatively out of the way so that it does not get confused with the contact section.
 
 # Style
 
