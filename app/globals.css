@@ -13,7 +13,6 @@
   --secondary: #64748b;
   --accent: #3b82f6;
   --background: #ffffff;
-  --background-alt: #f8fafc;
   --text-primary: #1e293b;
   --text-secondary: #475569;
   --text-light: #94a3b8;
@@ -40,13 +39,6 @@
   }
 }
 
-body {
-  color: var(--text-primary);
-  background: var(--background);
-  line-height: 1.6;
-  position: relative;
-}
-
 main {
   position: relative;
   width: 100%;
@@ -63,13 +55,17 @@ main {
   position: relative;
 }
 
+.main {
+  background-color: var(--background-alt);
+}
+
 .content-wrapper {
-  background: var(--background);
-  border-radius: 1.5rem;
+  background-color: var(--background);
+  border-radius: 0.7rem;
   padding: 1rem;
   margin: 4rem auto;
-  margin-top: 1rem;
-  max-width: 80%;
+  margin-top: -100vh;
+  max-width: 80rem;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   position: relative;
   z-index: 2;

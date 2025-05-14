@@ -24,25 +24,24 @@ const dummyProjects = [
 
 export default function Home() {
   return (
-    <main className="relative">
+    <main className="main">
+      <div className="absolute inset-0 bg-black opacity-50" />
       <Navigator />
       <AboutMe />
-      <div className="relative bg-white">
-        <div className="content-wrapper">
-          <ContentSection
-            id="publications"
-            title="Publications"
-            items={publications}
-          />
-          <ContentSection
-            id="projects"
-            title="Projects"
-            items={dummyProjects}
-          />
-          <Contact />
-        </div>
-        <Footer />
+      <div className="content-wrapper">
+        <ContentSection
+          id="publications"
+          title="Publications"
+          items={publications}
+        />
+        <ContentSection
+          id="projects"
+          title="Projects"
+          items={dummyProjects}
+        />
+        <Contact />
       </div>
+      <Footer />
     </main>
   );
 }

@@ -46,7 +46,7 @@ export default function Navigator() {
               spy={false}
               smooth={true}
               offset={-64}
-              duration={500}
+              duration={75}
               className={`
                 hover-effect cursor-pointer font-medium px-4 py-2 rounded-md
                 transition-all duration-200 active:scale-95
