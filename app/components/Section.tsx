@@ -7,7 +7,7 @@ interface SectionProps {
 
 export default function Section({ id, title, children, fullWidth }: SectionProps) {
   return (
-    <section id={id} className="relative">
+    <section id={id} className="relative mt-6 mb-3">
       {!fullWidth && <div className="absolute inset-0 bg-background" />}
       <div className={fullWidth ? "" : "relative section-container"}>
         {title && (

@@ -3,6 +3,7 @@ import AboutMe from './components/AboutMe';
 import ContentSection from './components/ContentSection';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ParallaxBackground from './components/ParallaxBackground';
 
 const publications = [
   {
@@ -29,24 +30,26 @@ const dummyProjects = [
 
 export default function Home() {
   return (
-    <main>
-      <Navigator />
-      <AboutMe />
-        
-      <div className="content-wrapper">
-        <ContentSection
-          id="publications"
-          title="Publications"
-          items={publications}
-        />
-        <ContentSection
-          id="projects"
-          title="Projects"
-          items={dummyProjects}
-        />
-        <Contact />
+    <main className="relative">
+      <ParallaxBackground />
+      <div className="relative" style={{ zIndex: 2 }}>
+        <Navigator />
+        <AboutMe />
+        <div className="content-wrapper">
+          <ContentSection
+            id="publications"
+            title="Publications"
+            items={publications}
+          />
+          <ContentSection
+            id="projects"
+            title="Projects"
+            items={dummyProjects}
+          />
+          <Contact />
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </main>
   );
 }
