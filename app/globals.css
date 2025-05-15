@@ -76,7 +76,7 @@ main {
 }
 
 .card {
-  @apply bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200;
+  @apply bg-white rounded-lg border-transparent hover:border-gray-100 hover:shadow-lg transition-all duration-300;
 }
 
 .parallax-container {

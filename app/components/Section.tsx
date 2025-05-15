@@ -12,7 +12,7 @@ export default function Section({ id, title, children, fullWidth }: SectionProps
       <div className={fullWidth ? "w-full h-full" : "relative section-container"}>
         {title && (
           <div>
-            <h2 className="text-3xl mb-6 font-bold text-center font-['Poppins'] text-text-primary">
+            <h2 className="text-3xl my-6 font-bold text-center font-['Poppins'] text-text-primary">
               {title}
             </h2>
           </div>
