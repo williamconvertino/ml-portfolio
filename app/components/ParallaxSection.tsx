@@ -2,9 +2,9 @@
 
 import { Parallax } from 'react-parallax';
 
-export default function AboutMe() {
+export default function ParallaxSection() {
   return (
-    <div id="about" className="relative min-h-[200vh]">
+    <div className="relative min-h-[200vh]">
       <Parallax
         blur={0}
         bgImage="/background.jpg"

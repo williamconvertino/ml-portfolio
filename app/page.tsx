@@ -1,5 +1,5 @@
 import Navigator from './components/Navigator';
-import AboutMe from './components/AboutMe';
+import ParallaxSection from './components/ParallaxSection';
 import ContentSection from './components/ContentSection';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -27,7 +27,7 @@ export default function Home() {
     <main className="main">
       <div className="absolute inset-0 bg-black opacity-50" />
       <Navigator />
-      <AboutMe />
+      <ParallaxSection />
       <div className="content-wrapper">
         <ContentSection
           id="publications"
