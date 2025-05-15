@@ -35,7 +35,7 @@ export default function Navigator() {
       isScrolled ? 'bg-white border-b border-gray-100' : 'bg-transparent'
     }`}>
       <div className="section-container h-[4rem] flex items-center justify-between">
-        <div className={`text-2xl font-bold font-['Poppins'] transition-colors duration-300 ${
+        <div className={`text-3xl font-bold font-['Poppins'] transition-colors duration-300 ${
           isScrolled ? 'text-primary' : 'text-white'
         }`}>
           William Convertino
