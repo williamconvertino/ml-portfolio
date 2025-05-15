@@ -1,5 +1,5 @@
 import Navigator from './components/Navigator';
-import ParallaxSection from './components/ParallaxSection';
+import HeroSection from './components/HeroSection';
 import ContentSection from './components/ContentSection';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -22,12 +22,16 @@ const dummyProjects = [
   },
 ];
 
+const heroContent = `My name is William Convertino and I'm a PhD student at Duke University. My focus is on improving the interpretability of the transformer for language and vision. I've had a paper accepted at ICML and look forward to furthering my research in the field.`;
+
 export default function Home() {
   return (
     <main className="main">
-      <div className="absolute inset-0 bg-black opacity-50" />
       <Navigator />
-      <ParallaxSection />
+      <HeroSection 
+        backgroundImage="/background.jpg"
+        content={heroContent}
+      />
       <div className="content-wrapper">
         <ContentSection
           id="publications"
